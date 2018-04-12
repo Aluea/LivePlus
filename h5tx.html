@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Hello Amaze UI</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style type="text/css">
+	.box{height: 100px;width: 100px;background-color: lightblue}
+    .infinite{animation-iteration-count:infinite;}
+    @keyframes myfirst
+{
+	0%   { top:-300px;}
+	
+	100% {-webkit-transform:rotate(40deg); top:0px;}
+}
+@keyframes heart-burst {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@keyframes chuxian{
+    0% {
+   left:-200px;
+  }
+  100% {
+   left:50%;
+  }
+}
+ .mimg{
+    position:absolute;
+    left:50%; top:-600px;
+    margin-left: -225px;
+    width: 450px;
+    height: 600px;
+	animation:myfirst 1s;
+    animation-fill-mode:forwards;
+    animation-delay:3s;
+	-webkit-animation:myfirst 1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-delay:1s;
+    z-index: 4;
+ }
+ .mgif{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 2;
+ }
+ .mbg{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+ }
+ p.kt{
+   
+    position:absolute;
+    left:-200px; 
+    color: #fff;
+    font-size: 13px;
+    z-index: 3;
+    animation:chuxian 2s;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation:chuxian 2s;
+    -webkit-animation-fill-mode:forwards;
+   
+ }
+ p.a1{
+    top:120px; 
+
+    animation-delay:2s;
+    -webkit-animation-delay:2s;
+ }
+ p.a2{
+    top:150px; 
+    margin-left: -20px;
+    animation-delay:3.5s;
+    -webkit-animation-delay:3s;
+ }
+ p.a3{
+    top:180px; 
+    margin-left: -40px;
+    animation-delay:4.5s;
+    -webkit-animation-delay:4s;
+ }
+ p.a4{
+    top:220px; 
+    margin-left: -90px;
+     animation-delay:6s;
+    -webkit-animation-delay:5s;
+ }
+ p.a5{
+    top:250px; 
+    margin-left: -110px;
+    animation-delay:7.5s;
+    -webkit-animation-delay:6s;
+ }
+ p.a6{
+    top:280px; 
+    margin-left: -130px;
+    animation-delay:9s;
+    -webkit-animation-delay:7s;
+ }
+ .showpic{
+     width: 100%;
+     height: 100%;
+ }
+ div.pages{
+     width: 100%;
+     height: 100%;
+ }
+div.pages p{
+     font-size: 12px;
+     font-weight: 800;
+ }
+ .cas{
+     margin-top: 30px;
+    width: 100%;
+     height: 100%;
+  
+ }
+	</style>
+	 
+</head>
+<body >
+    <center>
+          <!--    
+               <link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/animate-3.6.0.min.css">
+                -->
+        <img class="mimg" width="220" height="300" src="data/1.png">
+        <img class="mgif"  >
+       
+        <p class="kt a1">0.01秒定格的毕业照</p>
+        <p class="kt a2">留住的是所有人的笑脸</p>
+        <p class="kt a3">当你回首,</p>
+        <p class="kt a4">是否还能想起他温柔为你整理的衣襟</p>
+        <p class="kt a5">又是否能发现她最后望向你眼里的深情</p>
+        <p class="kt a6">Live+为你留住不仅仅这一瞬间的回忆</p>
+   
+        
+    </center>
+    <div class="pages" id="page1"><img class="showpic" id="bg1" src="data/11.jpg"></div>
+    <div class="pages" id="page2">
+        <center>
+            <img class="showpic" id="bg2" src="data/3.jpg">
+            <p>留下流动的回忆</p>
+        <video class="cas"  id="video-canvas" src="data/9.mp4"></video>  
+        </center>
+    </div>
+    <div class="pages" id="page3">
+        <center>
+            <img class="showpic" id="bg3" >
+        </center>
+    </div>
+    <div class="pages" id="page4">
+        <center>
+            <img class="showpic" id="bg4" >
+            <p>我们有过八次开学，却只有七次放假</p>
+            <P>少了的那次，就是告别</P>
+            <P>---毕业照火热预定，尽在live plus</P>
+        </center>
+    </div>
+    <script src="js/jquery.min.js"></script>
+  
+    <script>
+        var player;var screenHeight;var ints,ints2;
+        var videos;
+    function showgif(){
+        $(".mgif").css("display","block");
+    }
+    function mcheck(){
+       
+      
+      //   player.play();
+     
+         alert("aaa");
+        
+    }
+    function godown(){
+
+    }
+    function onLoad(){
+       // alert("go");
+      // resize();
+     //   setTimeout("showgif()",1000);
+         videos = document.getElementById('video-canvas');
+       
+         $("#video-canvas").click(function(){
+            videos.play();
+          });
+		//var url = 'ws://'+document.location.hostname+':8082/';
+		var url="out.ts";
+	    //player = new JSMpeg.Player(url, {canvas: canvas});
+	
+        $("#bg3").attr("src","data/4.jpg");
+        $("#bg4").attr("src","data/5.jpg");
+       // setTimeout("mcheck()",6000);
+    }
+    function resize(){
+        var screenWidth = window.innerWidth;
+	    screenHeight = window.innerHeight;
+        $("#page2").css("top",screenHeight+"px");
+        $("#page3").css("top",screenHeight+"px");
+        $("#page4").css("top",screenHeight+"px");
+    }
+    window.onload = onLoad;
+    </script>
+
+</body>
+</html>
